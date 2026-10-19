@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sung Choi × Concord · 风格参考</title>
+<style>
+  :root {
+    --bg: #12191c;
+    --bg-deep: #0e1518;
+    --panel: #1a2428;
+    --panel-2: #212e33;
+    --ink: #e7eeeb;
+    --muted: #93a8a3;
+    --faint: #6d827d;
+    --line: rgba(143, 196, 186, 0.28);
+    --line-soft: rgba(143, 196, 186, 0.14);
+    --teal: #2e6b63;
+    --teal-2: #3f8f84;
+    --teal-glow: rgba(63, 143, 132, 0.22);
+    --amber: #e08b3c;
+    --amber-2: #ffb06a;
+    --charcoal: #1b1f24;
+    --sky: #7fa9c4;
+    --moon: #c98bc4;
+    --coral: #f0d9d2;
+    --water: #2e8b7e;
+    --rust: #8a6a52;
+    --neon-p: #ff4fa3;
+    --neon-g: #38e08b;
+    --danger: #d46a5a;
+    --ok: #7dcea0;
+    --shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+    --sans: "Noto Sans CJK SC", "Noto Sans SC", "Source Han Sans SC", "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+    --mono: "Noto Sans Mono CJK SC", "IBM Plex Mono", "Source Code Pro", ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background:
+      radial-gradient(1200px 600px at 80% -10%, rgba(46, 107, 99, 0.28), transparent 60%),
+      radial-gradient(900px 500px at -10% 20%, rgba(224, 139, 60, 0.08), transparent 55%),
+      var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+  }
+  a { color: var(--amber-2); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  img { max-width: 100%; display: block; }
+
+  .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+  nav.top {
+    position: sticky; top: 0; z-index: 20;
+    background: rgba(14, 21, 24, 0.86);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  nav.top .wrap {
+    display: flex; gap: 14px; align-items: center;
+    overflow-x: auto; padding: 10px 0;
+    font-size: 13px; letter-spacing: 0.06em;
+  }
+  nav.top a { color: var(--muted); white-space: nowrap; }
+  nav.top a:hover { color: var(--ink); text-decoration: none; }
+  .brand { color: var(--ink) !important; font-weight: 650; letter-spacing: 0.14em; margin-right: 8px; }
+
+  .hero {
+    position: relative;
+    min-height: 78vh;
+    display: flex; align-items: flex-end;
+    background:
+      linear-gradient(180deg, rgba(14,21,24,0.15) 0%, rgba(14,21,24,0.25) 40%, rgba(18,25,28,0.92) 78%, var(--bg) 100%),
+      url("images/Crater_City_Early_Concept__sung-choi-crater-city-early-development-sungchoi-1920px.jpg") center 42% / cover no-repeat;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .hero .wrap { padding: 72px 0 48px; }
+  .kicker {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--amber-2);
+    letter-spacing: 0.22em;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .kicker::before {
+    content: "";
+    width: 28px; height: 1px;
+    background: var(--amber);
+  }
+  h1 {
+    margin: 0 0 18px;
+    font-weight: 650;
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    max-width: 16em;
+  }
+  .lede {
+    max-width: 46em;
+    font-size: 18px;
+    color: #d5e3de;
+    margin: 0 0 22px;
+  }
+  .meta { color: var(--muted); font-size: 13px; display: flex; gap: 18px; flex-wrap: wrap; }
+  .meta span::before { content: "· "; color: var(--teal-2); }
+
+  section { padding: 64px 0 8px; }
+  h2 {
+    margin: 0 0 8px;
+    font-size: 28px;
+    font-weight: 650;
+    letter-spacing: 0.04em;
+  }
+  h2 .num {
+    color: var(--amber);
+    font-variant-numeric: tabular-nums;
+    margin-right: 10px;
+    font-size: 0.78em;
+    letter-spacing: 0.12em;
+  }
+  .sub { color: var(--muted); margin: 0 0 22px; max-width: 62em; }
+  h3 { margin: 26px 0 10px; font-size: 18px; font-weight: 650; letter-spacing: 0.04em; color: #d7ebe6; }
+
+  .panel {
+    background: linear-gradient(180deg, rgba(63,143,132,0.08), transparent 42%), var(--panel);
+    border: 1px solid var(--line);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03), inset 0 0 28px var(--teal-glow), var(--shadow);
+    border-radius: 2px;
+    padding: 22px 22px 18px;
+    position: relative;
+    margin: 14px 0 18px;
+  }
+  .panel::before, .panel::after {
+    content: "";
+    position: absolute;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #d7efe9, var(--teal) 55%, #16332f);
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.45);
+  }
+  .panel::before { top: 8px; left: 8px; }
+  .panel::after { top: 8px; right: 8px; }
+  .panel .rivet-b {
+    position: absolute; bottom: 8px; left: 8px; right: 8px; height: 6px; pointer-events: none;
+  }
+  .panel .rivet-b::before, .panel .rivet-b::after {
+    content: ""; position: absolute; width: 6px; height: 6px; border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #d7efe9, var(--teal) 55%, #16332f);
+  }
+  .panel .rivet-b::after { right: 0; }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  @media (max-width: 860px) {
+    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  }
+
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+  th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line-soft); vertical-align: top; }
+  th { color: var(--amber-2); font-weight: 600; letter-spacing: 0.06em; font-size: 12px; }
+  td.k { color: var(--teal-2); white-space: nowrap; font-weight: 650; }
+
+  ul.clean { margin: 8px 0 0; padding-left: 1.15em; }
+  ul.clean li { margin: 6px 0; }
+  ol.cams { margin: 8px 0 0; padding-left: 1.2em; }
+  ol.cams li { margin: 10px 0; }
+
+  .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(148px, 1fr)); gap: 10px; }
+  button.swatch, .swatch {
+    appearance: none; border: 1px solid var(--line); background: var(--panel-2); color: inherit;
+    text-align: left; padding: 0; cursor: pointer; font-family: inherit; border-radius: 2px; overflow: hidden;
+  }
+  button.swatch:hover { border-color: var(--amber); }
+  .chip-color { display:block; height: 58px; font-style:normal; }
+  .swatch figcaption, button.swatch span.cap { display: block; padding: 8px 10px 10px; }
+  .hex { font-family: var(--mono); font-size: 12px; color: var(--amber-2); letter-spacing: 0.04em; }
+  .role { display: block; color: var(--muted); font-size: 12px; margin-top: 2px; }
+
+  .formula { margin-bottom: 8px; }
+  .formula h3 { display: flex; align-items: baseline; gap: 10px; }
+  .tag {
+    display: inline-block;
+    border: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    padding: 2px 7px;
+    border-radius: 99px;
+  }
+
+  .cloud { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pill {
+    border: 1px solid var(--line);
+    background: rgba(46, 107, 99, 0.16);
+    color: #d5ebe6;
+    padding: 6px 11px;
+    font-size: 13.5px;
+    border-radius: 2px;
+  }
+  .pill.warm { background: rgba(224, 139, 60, 0.12); border-color: rgba(224, 139, 60, 0.4); }
+  .pill.moon { background: rgba(201, 139, 196, 0.12); border-color: rgba(201, 139, 196, 0.4); }
+
+  .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 760px) { .gallery { grid-template-columns: 1fr; } }
+  figure.shot {
+    margin: 0;
+    background: var(--bg-deep);
+    border: 1px solid var(--line-soft);
+    overflow: hidden;
+  }
+  figure.shot img { width: 100%; height: 240px; object-fit: cover; object-position: center; }
+  figure.shot.wide { grid-column: 1 / -1; }
+  figure.shot.wide img { height: auto; max-height: 520px; object-fit: contain; background: #0c1214; }
+  figure.shot figcaption {
+    padding: 8px 12px 10px;
+    font-size: 13px;
+    color: var(--muted);
+    display: flex; justify-content: space-between; gap: 12px;
+  }
+  figure.shot figcaption b { color: var(--ink); font-weight: 600; }
+
+  .prompt-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .prompt-head h3 { margin: 0; }
+  button.copy, button.swatch-copy {
+    background: transparent;
+    color: var(--amber-2);
+    border: 1px solid rgba(224, 139, 60, 0.55);
+    font-family: inherit;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  button.copy:hover { background: rgba(224, 139, 60, 0.12); }
+  pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-family: var(--mono);
+    font-size: 12.5px;
+    line-height: 1.65;
+    color: #d7ebe4;
+    background: #10171a;
+    border: 1px solid var(--line-soft);
+    padding: 14px 14px 14px 16px;
+    border-left: 2px solid var(--teal-2);
+  }
+  .mods { display: grid; grid-template-columns: 160px 1fr; gap: 6px 14px; font-size: 14px; }
+  .mods dt { color: var(--amber-2); letter-spacing: 0.06em; font-size: 12px; padding-top: 3px; }
+  .mods dd { margin: 0 0 8px; color: #d5e4df; }
+  code { font-family: var(--mono); font-size: 0.92em; color: #f0d2b0; }
+
+  .neg { color: #f0c7bf; border-left-color: var(--danger); }
+  .warn { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  @media (max-width: 860px) { .warn, .mods { grid-template-columns: 1fr; } .mods dt { padding-top: 0; } }
+  .warn article {
+    border-top: 2px solid var(--amber);
+    padding-top: 8px;
+  }
+  .warn strong { display: block; margin-bottom: 4px; }
+
+  .checks { list-style: none; padding: 0; margin: 0; columns: 2; column-gap: 28px; }
+  @media (max-width: 760px) { .checks { columns: 1; } }
+  .checks li {
+    break-inside: avoid;
+    display: flex; gap: 10px; align-items: flex-start;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--line-soft);
+    cursor: pointer;
+    font-size: 14.5px;
+  }
+  .box {
+    flex: 0 0 14px; height: 14px; margin-top: 4px;
+    border: 1px solid var(--teal-2);
+    position: relative;
+  }
+  .checks li.on { color: var(--muted); }
+  .checks li.on .box { background: var(--teal); border-color: var(--teal-2); }
+  .checks li.on .box::after {
+    content: ""; position: absolute; left: 3px; top: 1px;
+    width: 5px; height: 8px; border: solid #e7eeeb; border-width: 0 1.5px 1.5px 0; transform: rotate(40deg);
+  }
+
+  footer.colophon {
+    margin: 48px 0 28px;
+    color: var(--faint);
+    font-size: 12.5px;
+    border-top: 1px solid var(--line-soft);
+    padding-top: 16px;
+  }
+  .toast {
+    position: fixed; bottom: 18px; right: 18px;
+    background: #1c2c28; color: var(--ink);
+    border: 1px solid var(--amber);
+    padding: 8px 12px; font-size: 13px;
+    opacity: 0; pointer-events: none; transition: opacity .2s;
+  }
+  .toast.show { opacity: 1; }
+</style>
+</head>
+<body>
+<nav class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">SUNG CHOI</a>
+    <a href="#locate">定位</a>
+    <a href="#comp">构图</a>
+    <a href="#color">光色</a>
+    <a href="#mat">材质</a>
+    <a href="#motif">母题</a>
+    <a href="#refs">参考图</a>
+    <a href="#prompt">提示词</a>
+    <a href="#neg">负向</a>
+    <a href="#flow">工作流</a>
+    <a href="#legal">版权</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="kicker">Concord · 概念美术风格参考</div>
+    <h1>青绿工业巨构，琥珀点光，used future。</h1>
+    <p class="lede">明亮青蓝天空下的青绿工业巨构 + 琥珀点光 + 高饱和复古未来波普色，用极端机位和点景小人的尺度对比讲「used future」的世界观。</p>
+    <div class="meta">
+      <span>Sung Choi × Concord</span>
+      <span>依据 STYLE_ANALYSIS.md</span>
+      <span>2026-10-19</span>
+      <span>个人学习与风格研究</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section id="locate">
+  <h2><span class="num">00</span>一句话定位</h2>
+  <div class="panel">
+    <span class="rivet-b"></span>
+    <p style="margin-top:0">硬表面工业语言（面板、脚手架、轨道环、铆接金属）× 大面积青绿锈蚀 × 少量高饱和橙 / 粉紫 / 霓虹作为视觉焦点。</p>
+    <p style="margin-bottom:0">成品图偏干净渲染 + 局部笔触概括；草图则压缩为厚笔触限色色块。取向是复古未来（retro-futurism，Syd Mead / John Berkey），不是写实硬科幻。</p>
+  </div>
+</section>
+
+<section id="comp">
+  <h2><span class="num">01</span>构图规则</h2>
+  <p class="sub">镜头、尺度、引导线、负空间。复刻最关键的一条是尺度层级。</p>
+
+  <h3>1.1 尺度层级</h3>
+  <p class="sub">每张图至少 2 个尺度层级；史诗全景要 3 个。L3 必须清晰可辨但不是主体——用高对比剪影、尾迹、点光把它从背景里拎出来，放在 L1 与 L2 之间的负空间或引导线上。</p>
+  <div class="panel">
+    <span class="rivet-b"></span>
+    <table>
+      <thead><tr><th>层级</th><th>画面占比</th><th>作用</th><th>例</th></tr></thead>
+      <tbody>
+        <tr><td class="k">L1 巨构</td><td>55–80%，允许出血出框被裁切</td><td>建立震撼</td><td>环形太空港、太空电梯尖塔、废弃机器人头颅</td></tr>
+        <tr><td class="k">L2 人居 / 中景</td><td>8–18%</td><td>建立「可居住」</td><td>棚户脚手架、定居点、轨道平台</td></tr>
+        <tr><td class="k">L3 点景比例尺</td><td>0.5–3%</td><td>唯一让巨构显得「大」的东西</td><td>小人、小飞船、运输船、白色尾迹</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>1.2 机位库</h3>
+  <p class="sub">只用这四类，别用平视中性机位。焦距：24–35mm 广角做巨构与空间纵深；50mm 做中景人居；避免 85mm 以上的压缩感（原文在括号处截断：会丢掉「巨」）。</p>
+  <div class="grid-2">
+    <div class="panel"><span class="rivet-b"></span><h3 style="margin-top:0">极端高俯视 45–75°</h3><p>看深渊雾谷、曲面行星、环形城市（Akkar、Crater City）。地平线可抬到画面上 1/5，甚至不出地平线。</p></div>
+    <div class="panel"><span class="rivet-b"></span><h3 style="margin-top:0">低机位仰视</h3><p>巨构压在画面上方 2/3，天空留 1/3（Guild 环、Gloom 头颅）。</p></div>
+    <div class="panel"><span class="rivet-b"></span><h3 style="margin-top:0">贴水平线</h3><p>液面 / 地表齐平，主体从画面下方冲出（Leviathan）。水面线压在画面下 1/3。</p></div>
+    <div class="panel"><span class="rivet-b"></span><h3 style="margin-top:0">座舱 / 框景</h3><p>用窗框、门洞、机械手指间隙把远景框起来（Cockpit、Gloom 指缝）。</p></div>
+  </div>
+
+  <h3>1.3 引导线</h3>
+  <p class="sub">每张至少一条贯穿主线。终点必须是 L2 或 L3 的焦点，不要消失在画外没人接。</p>
+  <ul class="clean">
+    <li>环形 / 弧形：轨道环、珊瑚岩环、行星边缘弧线 → 绕回主体。</li>
+    <li>斜线：吊桥、脚手架、下降坡道、悬崖竖线 → 高度差与危险感。</li>
+    <li>运动线：飞船尾迹、运输船航迹、喷发水柱 → 画外空间与时间。</li>
+    <li>光线线：轨灯序列、灯笼串、窗光带 → 把视线拉到兴趣点。</li>
+  </ul>
+
+  <h3>1.4 负空间</h3>
+  <ul class="clean">
+    <li>天空 / 雾层 / 深渊占 25–40%，并且是单一连续块面，不要被碎结构切割。</li>
+    <li>主体团块集中在一侧（左 1/3 或右 1/3）或中心偏下，避免均匀铺满。</li>
+    <li>负空间同时承载大气透视和唯一的点景 L3，两者叠加效率最高。</li>
+  </ul>
+
+  <h3>1.5 画幅</h3>
+  <div class="panel">
+    <span class="rivet-b"></span>
+    <table>
+      <thead><tr><th>画幅</th><th>用途</th><th>注意</th></tr></thead>
+      <tbody>
+        <tr><td class="k">16:9</td><td>主力交付（1600×900 / 1920×1080）</td><td>构图重心在中下部 60%</td></tr>
+        <tr><td class="k">21:9</td><td>巨构全景、曲面行星（1920×800）</td><td>地平线 / 弧线放在 1/2 稍上</td></tr>
+        <tr><td class="k">1:1</td><td>缩略图裁切（1500×1500）</td><td>主体重心落在中央上偏 10% 的安全区</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-bottom:0">批量生成时先按 16:9 出图，再 central-crop 到 1:1 检查，不合格的构图直接弃用。</p>
+  </div>
+</section>
+
+<section id="color">
+  <h2><span class="num">02</span>光影与色彩</h2>
+  <p class="sub">辨识点是「大环境软漫射 + 小光源硬点光」。色值是起稿近似值；实际复刻应从参考图取 5–8 个采样点，做成每项目专属色板，再写进 prompt 的 color key。点击色块可复制 HEX。</p>
+
+  <h3>光型</h3>
+  <div class="grid-3">
+    <div class="panel"><span class="rivet-b"></span><h3 style="margin-top:0">环境光</h3><p>阴天式软漫射天光 / 大气尘雾散射。阴影边缘柔，无明确投射方向。</p></div>
+    <div class="panel"><span class="rivet-b"></span><h3 style="margin-top:0">局部光</h3><p>橙色轨灯、琥珀城市灯、工业探照灯、霓虹招牌。小而硬，有衰减，在金属与雾中形成光晕。</p></div>
+    <div class="panel"><span class="rivet-b"></span><h3 style="margin-top:0">禁止</h3><p>单一大太阳硬光统治全画面；全局均匀提亮的游戏引擎平光。</p></div>
+  </div>
+
+  <h3>明度结构</h3>
+  <ul class="clean">
+    <li>暗部占 35–50%，但不用纯黑：深青灰（teal-black）或紫灰（violet-grey）。</li>
+    <li>最高明度只留给光源本体，以及天空 / 雾。</li>
+    <li>中间调承担全部材质信息，低对比，避免脏灰。</li>
+  </ul>
+
+  <h3>大气透视 · 必须 3 层</h3>
+  <div class="panel">
+    <span class="rivet-b"></span>
+    <table>
+      <thead><tr><th>层</th><th>饱和度</th><th>对比</th><th>色偏</th></tr></thead>
+      <tbody>
+        <tr><td class="k">近景</td><td>最高</td><td>最高</td><td>保持本色</td></tr>
+        <tr><td class="k">中景</td><td>−20~30%</td><td>中</td><td>轻微推向青绿</td></tr>
+        <tr><td class="k">远景</td><td>−50~70%</td><td>最低</td><td>推向青蓝 / 紫灰，加雾</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-bottom:0">雾用独立的 2–3 个深度叠：贴地雾 / 中层尘雾 / 高空霾。不要一张图一层雾糊到底。</p>
+  </div>
+
+  <h3>可点击色板</h3>
+  <div class="swatches" id="swatches">
+    <button class="swatch" data-hex="#12191C"><i class="chip-color" style="background:#12191C"></i><span class="cap"><span class="hex">#12191C</span><span class="role">页面底 · 深青灰</span></span></button>
+    <button class="swatch" data-hex="#1B1F24"><i class="chip-color" style="background:#1B1F24"></i><span class="cap"><span class="hex">#1B1F24</span><span class="role">炭黑暗部 · 公式 A</span></span></button>
+    <button class="swatch" data-hex="#2E6B63"><i class="chip-color" style="background:#2E6B63"></i><span class="cap"><span class="hex">#2E6B63</span><span class="role">青绿主色 · 氧化金属</span></span></button>
+    <button class="swatch" data-hex="#2E8B7E"><i class="chip-color" style="background:#2E8B7E"></i><span class="cap"><span class="hex">#2E8B7E</span><span class="role">青绿海水 · 公式 C</span></span></button>
+    <button class="swatch" data-hex="#7FA9C4"><i class="chip-color" style="background:#7FA9C4"></i><span class="cap"><span class="hex">#7FA9C4</span><span class="role">远景青蓝</span></span></button>
+    <button class="swatch" data-hex="#5EC8E0"><i class="chip-color" style="background:#5EC8E0"></i><span class="cap"><span class="hex">#5EC8E0</span><span class="role">亮青蓝天空 · Gloom</span></span></button>
+    <button class="swatch" data-hex="#E08B3C"><i class="chip-color" style="background:#E08B3C"></i><span class="cap"><span class="hex">#E08B3C</span><span class="role">琥珀点光</span></span></button>
+    <button class="swatch" data-hex="#FF8A3D"><i class="chip-color" style="background:#FF8A3D"></i><span class="cap"><span class="hex">#FF8A3D</span><span class="role">橙色内光 · 定居点</span></span></button>
+    <button class="swatch" data-hex="#C98BC4"><i class="chip-color" style="background:#C98BC4"></i><span class="cap"><span class="hex">#C98BC4</span><span class="role">粉紫月亮</span></span></button>
+    <button class="swatch" data-hex="#F0D9D2"><i class="chip-color" style="background:#F0D9D2"></i><span class="cap"><span class="hex">#F0D9D2</span><span class="role">珊瑚白 / 粉白岩</span></span></button>
+    <button class="swatch" data-hex="#8A6A52"><i class="chip-color" style="background:#8A6A52"></i><span class="cap"><span class="hex">#8A6A52</span><span class="role">锈褐废料</span></span></button>
+    <button class="swatch" data-hex="#FF4FA3"><i class="chip-color" style="background:#FF4FA3"></i><span class="cap"><span class="hex">#FF4FA3</span><span class="role">霓虹粉 · 仅内景焦点</span></span></button>
+    <button class="swatch" data-hex="#38E08B"><i class="chip-color" style="background:#38E08B"></i><span class="cap"><span class="hex">#38E08B</span><span class="role">霓虹绿 · 仅内景焦点</span></span></button>
+  </div>
+
+  <div class="formula">
+    <h3>公式 A <span class="tag">工业青绿 × 琥珀点光</span></h3>
+    <p class="sub">Guild / Akkar / Crater City / streets。青绿锈蚀金属与结构 55–65% + 深灰炭黑 15–25% + 琥珀橙点光 10–20%，远景推青蓝。</p>
+  </div>
+  <div class="formula">
+    <h3>公式 B <span class="tag">青蓝天空 × 粉紫月亮 × 霓虹内光</span></h3>
+    <p class="sub">Gloom。亮青蓝天空 40–50% + 粉紫大月亮 10–15% + 锈蚀金属废料山 25–30% + 霓虹粉/绿/蓝 5–10%（集中在头颅内部，唯一高饱和焦点）。</p>
+  </div>
+  <div class="formula">
+    <h3>公式 C <span class="tag">粉白有机岩 × 青绿海水 × 橙色内光</span></h3>
+    <p class="sub">Pirate Cove / Geysers of Coral Nova。粉白/珊瑚白岩环 30–40% + 青绿海水 25–35% + 橙色定居点内光 5–10% + 高湿度白雾 15–20%。</p>
+  </div>
+  <div class="formula">
+    <h3>公式 D <span class="tag">紫雾星空 × 青绿工业柱 × 白色探照</span></h3>
+    <p class="sub">Leviathan。深紫雾与星空 35–45% + 青绿工业结构 25–35% + 白色/冷青点光探照 5–10% + 湿润生物表面高光 3–5%。</p>
+  </div>
+  <div class="formula">
+    <h3>公式 E <span class="tag">限色色块 · World Sketches</span></h3>
+    <p class="sub">每格独立 3–4 色，跨格不共享色板。可用：橙+紫 / 蓝+黄 / 红+绿 / 青+橙+米白。每格 ≥70% 给 2 个主色，剩下给 1 个点缀色。</p>
+  </div>
+
+  <h3>对比策略</h3>
+  <ul class="clean">
+    <li>补色对比只用于焦点：青绿环境里唯一的橙色 = 视线必落点。</li>
+    <li>冷底暖点：大面积冷（青绿/青蓝/紫）+ 小面积暖（橙/琥珀），约 8:2。</li>
+    <li>同色相高明度差做结构区分（深青绿 vs 浅青绿），不要靠色相乱跳。</li>
+  </ul>
+</section>
+
+<section id="mat">
+  <h2><span class="num">03</span>材质与边缘</h2>
+  <div class="grid-2">
+    <div class="panel"><span class="rivet-b"></span>
+      <h3 style="margin-top:0">硬表面</h3>
+      <ul class="clean">
+        <li>先用 3–5 个大几何体块（环、筒、台、塔），细节只加在块面交界与轮廓线上。</li>
+        <li>边缘 / 接缝密（面板线、铆接、倒角、外露管线），大平面留空。禁止全表面均质噪声。</li>
+        <li>脚手架、吊桥、吊车、外挂舱、天线、栏杆是 used future 签名，必须出现在 L2。</li>
+        <li>结构轮廓要能一眼读出前后关系，雾不能把结构吃掉。</li>
+      </ul>
+    </div>
+    <div class="panel"><span class="rivet-b"></span>
+      <h3 style="margin-top:0">锈蚀与生活痕迹</h3>
+      <ul class="clean">
+        <li>锈是青绿色氧化层覆盖在深灰金属上，出现在接缝、下缘、积水处，低频斑块，不是高频噪点。</li>
+        <li>老化 = 局部破损 + 补丁色差 + 积尘带。每块大面加 1–2 处，不要全加。</li>
+        <li>布料遮阳篷、晾晒物、彩旗、霓虹招牌、临时加建，至少出现一处。否则变成无人废墟。</li>
+      </ul>
+    </div>
+    <div class="panel"><span class="rivet-b"></span>
+      <h3 style="margin-top:0">有机岩 / 生物</h3>
+      <ul class="clean">
+        <li>刺状、环状、层叠堆积、珊瑚分枝。圆润曲面对工业直线。</li>
+        <li>局部湿润高光，小而亮，配冷青反光。</li>
+        <li>母题：结构被生物或生活二次占用。岩环中心放定居点，废弃机械当居所。</li>
+      </ul>
+    </div>
+    <div class="panel"><span class="rivet-b"></span>
+      <h3 style="margin-top:0">边缘控制</h3>
+      <ul class="clean">
+        <li>焦点区硬边：结构轮廓、光源本体、L3 剪影。</li>
+        <li>非焦点区软边：雾、虚化远景、笔触概括。</li>
+        <li>禁止全图同一边缘硬度，也禁止全图景深虚化。概念图要读结构。</li>
+      </ul>
+    </div>
+  </div>
+  <h3>两种成品度，不要混用</h3>
+  <div class="panel">
+    <span class="rivet-b"></span>
+    <table>
+      <thead><tr><th>模式</th><th>特征</th><th>用在</th></tr></thead>
+      <tbody>
+        <tr><td class="k">干净渲染</td><td>结构边缘锐利、材质可读；只在烟雾 / 远景 / 水花处用可见笔触概括</td><td>城市、太空港、废墟巨构、海岸</td></tr>
+        <tr><td class="k">厚笔触色块</td><td>3–4 色、无细节、剪影优先、笔触方向跟随形体</td><td>世界草图、探索图、六宫格</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-bottom:0">干净渲染图里也必须保留局部笔触。全图均匀锐利会像 3D 白模。</p>
+  </div>
+</section>
+
+<section id="motif">
+  <h2><span class="num">04</span>母题</h2>
+  <p class="sub">批量时按「母题 × 配色公式 × 机位」组合取样。</p>
+  <h3>工业巨构</h3>
+  <div class="cloud">
+    <span class="pill">环形太空港 / 交通环穿小行星带 · Guild</span>
+    <span class="pill">太空电梯尖塔 + 曲面行星俯视 · Crater City</span>
+    <span class="pill">巨大工业柱 + 轨道平台 + 探照灯 · Leviathan</span>
+  </div>
+  <h3>居住 / 聚落</h3>
+  <div class="cloud">
+    <span class="pill">垂直悬崖棚户 · 脚手架吊桥彩色遮阳篷 · Akkar</span>
+    <span class="pill">陨石坑阶梯街区 · Crater City / streets</span>
+    <span class="pill warm">有机岩环中心橙色内光定居点 · Pirate Cove</span>
+    <span class="pill moon">废弃机器人头颅改民居 · 内部霓虹 · Gloom</span>
+  </div>
+  <h3>荒野 / 异星</h3>
+  <div class="cloud">
+    <span class="pill">锈蚀废料山 + 粉紫月亮</span>
+    <span class="pill">珊瑚间歇泉 + 高湿度雾</span>
+    <span class="pill">肉食性异星环境 / 坠毁现场</span>
+    <span class="pill">荒野矿区</span>
+    <span class="pill">风暴 Tempest</span>
+    <span class="pill">深色液面下的巨型生物</span>
+  </div>
+  <h3>内景 · 载具 · 生命</h3>
+  <div class="cloud">
+    <span class="pill">座舱 Cockpit</span>
+    <span class="pill">餐桌等生活室内</span>
+    <span class="pill">小型运输飞船 + 白色尾迹</span>
+    <span class="pill">吊运岩石的飞行器</span>
+    <span class="pill">穿梭 / 接驳船</span>
+    <span class="pill">分段生物机械</span>
+    <span class="pill">超尺度机械残件</span>
+    <span class="pill warm">点景小人 1–3%</span>
+    <span class="pill">沙虫 / 利维坦 · 湿润高光与飞溅</span>
+  </div>
+  <h3>几乎每张都有的氛围</h3>
+  <div class="cloud">
+    <span class="pill warm">尘雾</span>
+    <span class="pill">高湿度雾</span>
+    <span class="pill moon">紫雾星空</span>
+    <span class="pill warm">点光光晕</span>
+    <span class="pill">白色尾迹</span>
+    <span class="pill">飞溅水花</span>
+    <span class="pill warm">遮阳篷与招牌</span>
+  </div>
+</section>
+
+<section id="refs">
+  <h2><span class="num">04b</span>参考图</h2>
+  <p class="sub">从本地 <code>images/</code> 选的非缩略图主图（<code>is_cover_crop: false</code>）。1:1 封面裁切只适合看色彩与材质，不在此用作构图参考。图为 Sung Choi 原作，仅作风格研究对照。</p>
+  <div class="gallery">
+    <figure class="shot">
+      <img src="images/Akkar_Early_Concept__sung-choi-akkar-early-development-sungchoi-1920px.jpg" alt="Akkar Early Concept">
+      <figcaption><b>Akkar</b><span>高俯视 · 悬崖棚户 · 1920×1080</span></figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="images/Crater_City_early_concept__sung-choi-crater-city-sungchoi-1600px.jpg" alt="Crater City">
+      <figcaption><b>Crater City</b><span>陨石坑阶梯城 · 1600×900</span></figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="images/Early_Concept_for_the_streets_in_Concord__sung-choi-crater-city-street-early-development-sungchoi-1600px.jpg" alt="streets in Concord">
+      <figcaption><b>Streets</b><span>街区 · 生活痕迹 · 1600×900</span></figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="images/The_Guild_Concept__sung-choi-guild-early-development-sungchoi-1600px.jpg" alt="The Guild">
+      <figcaption><b>Guild</b><span>环形太空港 · 低机位 · 1600×900</span></figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="images/Gloom_Early_Concept__sung-choi-gloom-early-development-sungchoi-1600px.jpg" alt="Gloom">
+      <figcaption><b>Gloom</b><span>粉紫月亮 · 废墟头颅 · 1600×900</span></figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="images/Leviathan_Concept__sung-choi-leviathan-early-development-sungchoi-1920px.jpg" alt="Leviathan">
+      <figcaption><b>Leviathan</b><span>贴水平线 · 1920×1080</span></figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="images/Pirate_Cove_Concept_and_Some_Sketches__sung-choi-pirate-cove-exterior-sungchoi-1600px.jpg" alt="Pirate Cove">
+      <figcaption><b>Pirate Cove</b><span>有机岩环 · 橙内光 · 1600×900</span></figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="images/World_Sketches__sung-choi-world-development-01-sungchoi-1600px.jpg" alt="World Sketches">
+      <figcaption><b>World Sketches</b><span>限色厚笔触 · 1600×1309</span></figcaption>
+    </figure>
+    <figure class="shot wide">
+      <img src="contact_sheet.jpg" alt="联系图">
+      <figcaption><b>联系图</b><span>contact_sheet.jpg · 全套缩略对照</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="prompt">
+  <h2><span class="num">05</span>正向提示词</h2>
+  <p class="sub">拼装顺序固定，不要乱序。英文模块保持英文，可直接粘贴。</p>
+  <div class="panel">
+    <span class="rivet-b"></span>
+    <div class="prompt-head"><h3>拼装顺序</h3><button class="copy" data-copy="order">复制</button></div>
+    <pre id="order">[STYLE ANCHOR] + [SUBJECT] + [SCALE LAYERS] + [ENVIRONMENT] + [LIGHT] + [PALETTE] + [CAMERA] + [RENDER] + [MOOD]</pre>
+  </div>
+
+  <h3>可复用关键词模块</h3>
+  <div class="panel">
+    <span class="rivet-b"></span>
+    <dl class="mods">
+      <dt>STYLE ANCHOR</dt>
+      <dd><code>retro-futuristic concept art</code>, <code>science-fiction environment concept art</code>, <code>Syd Mead and John Berkey influence</code>, <code>70s retro-futurism</code>, <code>matte painting feel</code>, <code>worldbuilding concept art</code></dd>
+      <dt>SCALE</dt>
+      <dd><code>massive megastructure towering over the viewer</code>, <code>tiny human figures for scale</code>, <code>small transport ships trailing white contrails</code>, <code>extreme sense of scale</code>, <code>dwarfed by architecture</code></dd>
+      <dt>ENVIRONMENT</dt>
+      <dd><code>teal-green oxidized industrial metal</code>, <code>exposed scaffolding and catwalks</code>, <code>elevated walkways and hanging bridges</code>, <code>colored awnings and lived-in clutter</code>, <code>dust haze in three depth layers</code>, <code>humid mist</code>, <code>rusting scrap mountains</code>, <code>coral-like spiked rock ring</code>, <code>curved planetary horizon</code></dd>
+      <dt>LIGHT</dt>
+      <dd><code>soft diffuse overcast daylight</code>, <code>hard amber point lights</code>, <code>orange track lighting</code>, <code>industrial searchlights with visible light shafts</code>, <code>neon glow from inside</code>, <code>atmospheric bloom</code>, <code>no direct sun</code></dd>
+      <dt>PALETTE</dt>
+      <dd><code>dominant teal-green with charcoal shadows</code>, <code>amber orange accent lights</code>, <code>pink-purple moon</code>, <code>neon pink and green interior</code>, <code>blue atmospheric rim light at the horizon</code></dd>
+      <dt>CAMERA</dt>
+      <dd><code>extreme high-angle aerial view</code>, <code>low-angle looking up</code>, <code>wide 24mm lens</code>, <code>deep focus</code>, <code>cinematic composition</code>, <code>strong silhouette read</code></dd>
+      <dt>RENDER</dt>
+      <dd><code>clean digital painting with visible brushwork in haze and distance</code>, <code>crisp hard-surface detailing on silhouette edges</code>, <code>painterly atmospheric layers</code>, <code>no photorealism</code></dd>
+      <dt>MOOD</dt>
+      <dd><code>awe and quiet danger</code>, <code>lived-in used future</code>, <code>optimistic retro sci-fi</code>, <code>vast and lonely</code></dd>
+    </dl>
+  </div>
+
+  <h3>参数</h3>
+  <ul class="clean">
+    <li>比例：主力 16:9；巨构全景 21:9；缩略图另做 1:1 裁切验证。</li>
+    <li>风格参考权重 0.5–0.7；结构参考 0.35–0.5。过高会锁死构图。</li>
+    <li>单批次 8–12 张，同一 prompt 至少跑 2 个 seed。</li>
+  </ul>
+
+  <div class="panel">
+    <span class="rivet-b"></span>
+    <div class="prompt-head"><h3>模板 1 · 城市</h3><button class="copy" data-copy="t1">复制</button></div>
+    <p class="sub">Crater City / streets in Concord</p>
+    <pre id="t1">retro-futuristic science-fiction environment concept art, a dense terraced city built inside a vast crater, extreme high-angle aerial view looking down the terraces, teal-green oxidized industrial megastructure with exposed scaffolding, elevated walkways and hanging bridges, amber street lights and warm window glow speckling every level, small transport ships crossing the crater trailing white contrails, tiny human figures for scale on the walkways, blue atmospheric rim glow along the curved horizon, dust haze in three depth layers, soft diffuse overcast daylight with hard amber point lights, dominant teal-green and charcoal palette with amber accents, wide 24mm lens, deep focus, cinematic composition with strong silhouette read, clean digital painting with visible brushwork in the haze, Syd Mead and John Berkey influence, lived-in used future, extreme sense of scale --ar 16:9</pre>
+    <p>变体开关（三选一替换）：<code>low-angle from a street level</code> / <code>night version with dominant amber lights</code> / <code>fog-heavy version with only the top terraces visible</code></p>
+  </div>
+
+  <div class="panel">
+    <span class="rivet-b"></span>
+    <div class="prompt-head"><h3>模板 2 · 废墟巨构</h3><button class="copy" data-copy="t2">复制</button></div>
+    <p class="sub">Gloom / Akkar</p>
+    <pre id="t2">retro-futuristic concept art, a colossal rusted robot head repurposed as a settlement, low-angle view from the ground, rusting scrap mountains stacked around it, bright cyan-blue sky with a huge pink-purple moon, neon pink and green and blue interior glow spilling from openings in the head, patches of colored awnings and lived-in clutter, a giant mechanical finger half-buried in the scrap, a tiny ship arcing past with a white contrail, soft diffuse daylight with hard neon point lights, saturated 70s pop sci-fi palette, wide 28mm lens, deep focus, strong silhouette read, clean digital painting with visible brushwork in the dust, retro-futuristic worldbuilding, awe and quiet danger --ar 16:9</pre>
+    <p>变体开关：<code>abandoned and silent, no lights</code> / <code>golden dust hour with the moon low on the horizon</code> / <code>close-up on the interior market inside the head</code></p>
+  </div>
+
+  <div class="panel">
+    <span class="rivet-b"></span>
+    <div class="prompt-head"><h3>模板 3 · 太空港</h3><button class="copy" data-copy="t3">复制</button></div>
+    <p class="sub">The Guild</p>
+    <pre id="t3">retro-futuristic science-fiction concept art, an enormous ring-shaped spaceport and transit ring threading through a dense asteroid belt, teal-green and dark grey hull plating with panel lines, rivets and exposed conduits, orange track lighting running along the inner face of the ring, small transport ships and tiny human figures for scale against the ring, drifting asteroids in the foreground, industrial hard-surface design, thick atmospheric dust haze separating three depth layers, soft ambient space light with hard orange point lights, dominant teal-green with charcoal and amber accents, low-angle wide 24mm composition with the ring dominating the upper two thirds, deep focus, clean digital painting with painterly haze, extreme sense of scale, "GUILD Department of Transportation" style insignia on the hull, Syd Mead influence --ar 21:9</pre>
+    <p>变体开关：<code>inside the ring, looking along the track</code> / <code>docking bay interior with a ship arriving</code> / <code>ring seen from far away as a thin bright arc</code></p>
+  </div>
+
+  <div class="panel">
+    <span class="rivet-b"></span>
+    <div class="prompt-head"><h3>模板 4 · 有机海岸</h3><button class="copy" data-copy="t4">复制</button></div>
+    <p class="sub">Pirate Cove / Geysers of Coral Nova</p>
+    <pre id="t4">retro-futuristic concept art, a ring of spiked coral-like pale pink-white rock formations rising from teal-green water, a small settlement built inside the ring glowing with warm orange interior light, high-humidity mist drifting between the spires, geysers of water and steam shooting up, wet glossy highlights on the rock surfaces, soft diffuse overcast light with hard orange point lights inside the settlement, coral white and teal-green palette with orange accents, wide 28mm lens, low-angle across the water surface, deep focus, clean digital painting with painterly brushwork in the mist, bio-organic architecture fused with hard-surface shacks, calm but dangerous, extreme sense of scale --ar 16:9</pre>
+    <p>变体开关：<code>aerial view straight down into the ring</code> / <code>storm version with grey-green water and heavy spray</code> / <code>dusk version with the orange settlement as the only light source</code></p>
+  </div>
+
+  <div class="panel">
+    <span class="rivet-b"></span>
+    <div class="prompt-head"><h3>模板 5a · 世界草图单格</h3><button class="copy" data-copy="t5a">复制</button></div>
+    <pre id="t5a">loose world exploration sketch, thick painterly block-in, flat limited color palette of only four colors, strong silhouette first, no fine detail, no texture rendering, a retro-futuristic structure reading as a simple shape against a flat sky, visible brush strokes following the form, three-color dominance with one accent, graphic and poster-like, retro sci-fi worldbuilding thumbnail --ar 1:1</pre>
+  </div>
+  <div class="panel">
+    <span class="rivet-b"></span>
+    <div class="prompt-head"><h3>模板 5b · 六宫格</h3><button class="copy" data-copy="t5b">复制</button></div>
+    <pre id="t5b">six-panel grid of loose world exploration sketches, each panel using its own independent limited palette of three to four colors, different palette per panel (orange-purple, blue-yellow, red-green, teal-orange-white, pink-grey, green-amber), thick painterly block-in only, strong silhouettes, no fine detail, no gradients, flat poster-like shapes, retro-futuristic structures and landforms, Syd Mead and John Berkey influence on shape language --ar 3:2</pre>
+    <p>变体开关：<code>swap panel palettes</code> / <code>increase brush thickness</code> / <code>reduce to three colors per panel</code></p>
+  </div>
+</section>
+
+<section id="neg">
+  <h2><span class="num">06</span>负向规避</h2>
+  <div class="panel">
+    <span class="rivet-b"></span>
+    <div class="prompt-head"><h3>负向词</h3><button class="copy" data-copy="negp">复制</button></div>
+    <pre class="neg" id="negp">photorealistic, hyperrealistic, 8k octane render, unreal engine screenshot look, ray-traced reflections,
+dull desaturated grey-brown palette, monochrome, muddy colors, heavy film grain noise,
+direct harsh sunlight with long hard shadows, single sun as the only light source, flat even game-engine lighting,
+pure black shadows, blown-out white highlights,
+uniform high-frequency surface noise, gritty micro-detail everywhere, over-detailed greebles,
+smooth clean unscratched surfaces, brand-new glossy plastic,
+blurry soft focus everywhere, shallow depth of field, bokeh background,
+centered symmetrical flat composition, no scale reference, no human figures, no small ships,
+generic cyberpunk neon city, anime style, cartoon outlines, cel shading,
+text watermark, signature, logo overlay, UI elements, frame border, letterbox bars,
+extra limbs, deformed faces, distorted perspective on straight structures, warped text</pre>
+  </div>
+  <div class="warn">
+    <article><strong>01 不要写实引擎渲染</strong>会退化成普通科幻场景。</article>
+    <article><strong>02 不要纯黑暗部与大面积灰棕</strong>必须保住青绿主色。</article>
+    <article><strong>03 不要均匀细节与全图虚化</strong>核心是结构可读 + 尺度对比。</article>
+  </div>
+</section>
+
+<section id="flow">
+  <h2><span class="num">07</span>批量复刻工作流</h2>
+  <h3>7.1 参考图准备</h3>
+  <ol class="cams">
+    <li>按项目分桶：Akkar / Crater City / Guild / Gloom / Leviathan / Pirate Cove / World Sketches / Carnivorous Planet / Mining Site / Cockpit / Geysers of Coral Nova / Tempest / Dining Table / streets in Concord。</li>
+    <li>每桶挑 3–5 张代表图，优先 <code>is_cover_crop: false</code> 的原图。</li>
+    <li>每桶做色板采样（6–8 点：主色 2 / 辅色 2 / 点光 1–2 / 暗部 1 / 远景 1）和构图标注（机位、L1/L2/L3、引导线、负空间占比）。</li>
+    <li><code>is_cover_crop: true</code> 的 1500×1500 只用于色彩与材质，不用于构图。</li>
+  </ol>
+  <h3>7.2 生成中怎么用</h3>
+  <div class="panel">
+    <span class="rivet-b"></span>
+    <table>
+      <thead><tr><th>用途</th><th>手段</th><th>权重</th></tr></thead>
+      <tbody>
+        <tr><td>锁材质与色彩</td><td>style / palette reference</td><td class="k">0.5–0.7</td></tr>
+        <tr><td>锁机位与构图</td><td>image reference / ControlNet depth 或 lineart</td><td class="k">0.35–0.5</td></tr>
+        <tr><td>批量微调</td><td>img2img 低重绘</td><td class="k">0.35–0.45</td></tr>
+        <tr><td>系列结构一致</td><td>固定 seed + 固定 prompt 骨架，只换变体开关</td><td class="k">—</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-bottom:0">一次只锁一个变量。同时锁构图 + 色彩 + 材质会变成复制品。</p>
+  </div>
+
+  <h3>7.3 一致性检查清单</h3>
+  <p class="sub">点一条即勾上，只存在于本页，不上传。任一条未过，先改 prompt，不要反复抽卡。连续 3 批未过，回到 7.1 重新采样色板。</p>
+  <ul class="checks" id="checks">
+    <li><i class="box"></i><span>至少 2 个尺度层级；史诗图 3 个。</span></li>
+    <li><i class="box"></i><span>L3 点景（小人 / 小飞船 / 尾迹）清晰可辨，且不抢主体。</span></li>
+    <li><i class="box"></i><span>主色占 55–65%，且为青绿 / 青蓝系（Gloom 类除外）。</span></li>
+    <li><i class="box"></i><span>最亮的焦点只有一处，且与点光位置一致。</span></li>
+    <li><i class="box"></i><span>暗部是深青灰 / 紫灰，不是纯黑。</span></li>
+    <li><i class="box"></i><span>有 3 层大气透视（近 / 中 / 远）。</span></li>
+    <li><i class="box"></i><span>至少一条贯穿引导线，终点落在焦点。</span></li>
+    <li><i class="box"></i><span>负空间占 25–40%，且为连续块面。</span></li>
+    <li><i class="box"></i><span>硬表面「边缘密、大面空」，无均质噪声。</span></li>
+    <li><i class="box"></i><span>至少一处生活痕迹（遮阳篷 / 招牌 / 晾晒 / 霓虹）。</span></li>
+    <li><i class="box"></i><span>有一处暖色点光（橙 / 琥珀 / 粉）作冷色体系的呼吸口，面积不超过 5%。</span></li>
+    <li><i class="box"></i><span>远景主动降饱和、提亮、简化细节，不是把近景细节等比缩小。</span></li>
+    <li><i class="box"></i><span>主光源方向唯一且明确，阴影朝向同一侧。</span></li>
+    <li><i class="box"></i><span>硬表面至少两种粗糙度对比（哑光巨构 vs 微反光边缘）。</span></li>
+    <li><i class="box"></i><span>有一处可读的入口（门洞 / 坡道 / 桥接 / 航道）。</span></li>
+    <li><i class="box"></i><span>缩到 200px 宽时，主体轮廓仍能一眼读出。</span></li>
+    <li><i class="box"></i><span>除 Gloom / Tempest 外，避免纯黑压边与死黑大块。</span></li>
+    <li><i class="box"></i><span>画面内无文字、无水印、无边框、无 UI 覆盖。</span></li>
+    <li><i class="box"></i><span>与同批并排看，同一世界观，但不是同一张图。</span></li>
+  </ul>
+
+  <h3>7.4 变体策略</h3>
+  <p class="sub">产能分配：安全 60% / 中等 30% / 激进 10%。变体是定向偏移，不是多跑几张。</p>
+  <div class="grid-3">
+    <div class="panel"><span class="rivet-b"></span>
+      <h3 style="margin-top:0">A 安全 · 保结构换表皮</h3>
+      <p>只动一个非结构性变量。换色板（青绿→青蓝→青紫）、换时段（dusk / overcast noon / artificial night）、换天气（clear / light haze / thin dust，不加大雾）。固定 seed，只改 1–2 个词。</p>
+    </div>
+    <div class="panel"><span class="rivet-b"></span>
+      <h3 style="margin-top:0">B 中等 · 保世界观换机位</h3>
+      <p>高俯视 → 水平框景 → 低角度仰视。远景巨构 → 中景街区 → 近景局部。image reference 可松到 0.3，靠色板 + prompt 骨架维持一致。</p>
+    </div>
+    <div class="panel"><span class="rivet-b"></span>
+      <h3 style="margin-top:0">C 激进 · 保风格换母题</h3>
+      <p>只在项目早期做。换 L1 形态、换文明痕迹、跨桶混搭（Akkar 形体 + Gloom 光照）。多数进概念池，不直接交付。</p>
+    </div>
+  </div>
+  <p>每批记一行：批次号 / 模板号 / seed / 参考图 / 权重 / 变体档位 / 通过数。</p>
+
+  <h3>7.5 失败模式</h3>
+  <div class="panel">
+    <span class="rivet-b"></span>
+    <table>
+      <thead><tr><th>现象</th><th>大概率原因</th><th>修复</th></tr></thead>
+      <tbody>
+        <tr><td>退化成写实科幻</td><td>负向词缺失或权重不足</td><td>补 octane render、unreal engine screenshot</td></tr>
+        <tr><td>主色丢失、发灰发棕</td><td>色板描述太抽象</td><td>写出 2 主 2 辅的具体色名 + 比例</td></tr>
+        <tr><td>没有尺度感</td><td>L3 被省略</td><td>显式加 tiny human figures、distant small ships</td></tr>
+        <tr><td>画面平、无纵深</td><td>缺大气透视分层</td><td>补 three layers of atmospheric perspective</td></tr>
+        <tr><td>构图居中发闷</td><td>未指定负空间</td><td>off-center composition, large negative space on one side</td></tr>
+        <tr><td>细节糊成噪声</td><td>过度追求精细</td><td>no high-frequency detail, clean large planes</td></tr>
+        <tr><td>系列图不像一套</td><td>同时锁太多变量</td><td>回到一次只锁一个变量</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <h3>7.6 命名与归档</h3>
+  <p><code>{桶名}_{模板号}_{机位}_{变体档位}_{seed后四位}_{版本}.png</code>，例：<code>Akkar_T1_highangle_A_4821_v2.png</code>。原图与 1:1 裁切分开存放。通过的进 <code>approved/</code>，未通过的留在 <code>pool/</code> 不删，常是下一轮色板采样的素材。</p>
+  <div class="panel">
+    <span class="rivet-b"></span>
+    <p style="margin:0">这套体系的价值不在于复制某张图，而在于把一种可辨识的视觉语言拆成可调参数：色板比例、光照逻辑、尺度层级、笔触厚度。参数在手，风格才可迁移；只记 prompt，就只是抽卡。</p>
+  </div>
+</section>
+
+<section id="legal">
+  <h2><span class="num">08</span>版权与使用</h2>
+  <div class="panel">
+    <span class="rivet-b"></span>
+    <ol class="cams">
+      <li>用途限定：风格拆解、提示词模板与工作流仅供个人学习与风格研究，包括自学练习、风格分析、非公开的美术探索与教学讨论。</li>
+      <li>批量商用需自行确认版权。用于外包交付、产品内嵌、宣传物料、衍生品前，须自行核实生成工具的商用条款与输出物归属、参考图授权、以及与在先作品的实质性相似风险。本文档不构成授权、担保或法律意见。</li>
+      <li>风格不等于版权。色彩、光照、构图范式、笔触倾向通常不受著作权单独保护；具体作品的构图、角色、标志性建筑造型、独特纹样受保护。不要把参考图直接当 img2img 底图批量生产后宣称原创，也不要逐像素复刻单张作品。</li>
+      <li>提示词里的艺术家姓名（Syd Mead、John Berkey 等）只是风格语汇的简写，不代表关联、授权或背书。</li>
+      <li>各地对 AI 生成内容的可版权性认定不一。高价值资产建议叠加人工重绘、设计再创作，并留下创作过程。</li>
+      <li>向客户交付前，建议在合同中写明生成工具披露、素材来源与责任划分。</li>
+      <li>若某位艺术家的遗产管理方明确反对以其名义做风格描述，改用中性形式语言，例如「70 年代工业未来主义硬边块面 + 厚涂色块」。</li>
+      <li>因使用本文档内容产生的版权纠纷、合同违约或经济损失，由使用者自行承担。</li>
+    </ol>
+  </div>
+  <footer class="colophon">
+    单文件本地页 · CSS 内联 · 图片为同目录相对路径。源文档 STYLE_ANALYSIS.md，由 DeepSeek Flash 于 2026-10-19（Asia/Hong_Kong）根据本地参考图撰写。本页只做排版，不改规则。画面参考图版权归原作者 Sung Choi。
+  </footer>
+</section>
+</main>
+<div class="toast" id="toast">已复制</div>
+<script>
+(function () {
+  function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(text);
+    }
+    return new Promise(function (resolve, reject) {
+      var ta = document.createElement("textarea");
+      ta.value = text;
+      ta.setAttribute("readonly", "");
+      ta.style.position = "fixed";
+      ta.style.left = "-9999px";
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); resolve(); }
+      catch (e) { reject(e); }
+      finally { document.body.removeChild(ta); }
+    });
+  }
+  function toast(msg) {
+    var t = document.getElementById("toast");
+    t.textContent = msg;
+    t.classList.add("show");
+    clearTimeout(toast._t);
+    toast._t = setTimeout(function () { t.classList.remove("show"); }, 1200);
+  }
+  document.querySelectorAll("button.copy").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var el = document.getElementById(btn.getAttribute("data-copy"));
+      if (!el) return;
+      copyText(el.innerText.trim()).then(function () {
+        var old = btn.textContent;
+        btn.textContent = "已复制";
+        toast("已复制到剪贴板");
+        setTimeout(function () { btn.textContent = old; }, 1200);
+      }).catch(function () { toast("复制失败，请手动选择"); });
+    });
+  });
+  document.querySelectorAll("button.swatch").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var hex = btn.getAttribute("data-hex");
+      copyText(hex).then(function () { toast("已复制 " + hex); })
+        .catch(function () { toast(hex); });
+    });
+  });
+  document.querySelectorAll("#checks li").forEach(function (li) {
+    li.addEventListener("click", function () { li.classList.toggle("on"); });
+  });
+})();
+</script>
+</body>
+</html>
