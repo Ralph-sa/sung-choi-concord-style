@@ -324,8 +324,8 @@
 <header class="hero" id="top">
   <div class="wrap">
     <div class="kicker">Concord · 概念美术风格参考</div>
-    <h1>青绿工业巨构，琥珀点光，used future。</h1>
-    <p class="lede">明亮青蓝天空下的青绿工业巨构 + 琥珀点光 + 高饱和复古未来波普色，用极端机位和点景小人的尺度对比讲「used future」的世界观。</p>
+    <h1>青绿工业巨构，琥珀点光，有人住的旧未来。</h1>
+    <p class="lede">明亮青蓝天空下的青绿工业巨构 + 琥珀点光 + 高饱和复古未来波普色，用极端机位和点景小人的尺度对比，呈现有人居住、有维护痕迹的 used future（旧未来 / 使用过的未来）世界观。</p>
     <div class="meta">
       <span>Sung Choi × Concord</span>
       <span>依据 STYLE_ANALYSIS.md</span>
@@ -365,7 +365,7 @@
   </div>
 
   <h3>1.2 机位库</h3>
-  <p class="sub">只用这四类，别用平视中性机位。焦距：24–35mm 广角做巨构与空间纵深；50mm 做中景人居；避免 85mm 以上的压缩感（原文在括号处截断：会丢掉「巨」）。</p>
+  <p class="sub">只用这四类，别用平视中性机位。焦距：24–35mm 广角做巨构与空间纵深；50mm 做中景人居；避免 85mm 以上的压缩感（会丢掉巨构感）。</p>
   <div class="grid-2">
     <div class="panel"><span class="rivet-b"></span><h3 style="margin-top:0">极端高俯视 45–75°</h3><p>看深渊雾谷、曲面行星、环形城市（Akkar、Crater City）。地平线可抬到画面上 1/5，甚至不出地平线。</p></div>
     <div class="panel"><span class="rivet-b"></span><h3 style="margin-top:0">低机位仰视</h3><p>巨构压在画面上方 2/3，天空留 1/3（Guild 环、Gloom 头颅）。</p></div>
@@ -490,7 +490,7 @@
       <ul class="clean">
         <li>先用 3–5 个大几何体块（环、筒、台、塔），细节只加在块面交界与轮廓线上。</li>
         <li>边缘 / 接缝密（面板线、铆接、倒角、外露管线），大平面留空。禁止全表面均质噪声。</li>
-        <li>脚手架、吊桥、吊车、外挂舱、天线、栏杆是 used future 签名，必须出现在 L2。</li>
+        <li>脚手架、吊桥、吊车、外挂舱、天线、栏杆是「有人住的旧未来」（used future）的签名元素，必须出现在 L2。</li>
         <li>结构轮廓要能一眼读出前后关系，雾不能把结构吃掉。</li>
       </ul>
     </div>
@@ -596,7 +596,7 @@
     </figure>
     <figure class="shot">
       <img src="images/Early_Concept_for_the_streets_in_Concord__sung-choi-crater-city-street-early-development-sungchoi-1600px.jpg" alt="streets in Concord">
-      <figcaption><b>Streets</b><span>街区 · 生活痕迹 · 1600×900</span></figcaption>
+      <figcaption><b>街区 Streets</b><span>Crater City 街道 · 生活痕迹 · 1600×900</span></figcaption>
     </figure>
     <figure class="shot">
       <img src="images/The_Guild_Concept__sung-choi-guild-early-development-sungchoi-1600px.jpg" alt="The Guild">
@@ -627,33 +627,35 @@
 
 <section id="prompt">
   <h2><span class="num">05</span>正向提示词</h2>
-  <p class="sub">拼装顺序固定，不要乱序。英文模块保持英文，可直接粘贴。</p>
+  <p class="sub">拼装顺序固定，从左到右每槽只写一类信息。槽位名用英文便于对照；正文片段保持英文，便于粘贴进 Midjourney / SD 等生成器。</p>
   <div class="panel">
     <span class="rivet-b"></span>
     <div class="prompt-head"><h3>拼装顺序</h3><button class="copy" data-copy="order">复制</button></div>
+    <p class="sub" style="margin-top:0">风格锚点 → 主体 → 尺度层级 → 环境 → 光 → 色板 → 镜头 → 绘制方式 → 情绪。</p>
     <pre id="order">[STYLE ANCHOR] + [SUBJECT] + [SCALE LAYERS] + [ENVIRONMENT] + [LIGHT] + [PALETTE] + [CAMERA] + [RENDER] + [MOOD]</pre>
   </div>
 
   <h3>可复用关键词模块</h3>
+  <p class="sub">先读中文说明，再从每段 <code>code</code> 复制英文关键词拼进 prompt。</p>
   <div class="panel">
     <span class="rivet-b"></span>
     <dl class="mods">
-      <dt>STYLE ANCHOR</dt>
-      <dd><code>retro-futuristic concept art</code>, <code>science-fiction environment concept art</code>, <code>Syd Mead and John Berkey influence</code>, <code>70s retro-futurism</code>, <code>matte painting feel</code>, <code>worldbuilding concept art</code></dd>
-      <dt>SCALE</dt>
-      <dd><code>massive megastructure towering over the viewer</code>, <code>tiny human figures for scale</code>, <code>small transport ships trailing white contrails</code>, <code>extreme sense of scale</code>, <code>dwarfed by architecture</code></dd>
-      <dt>ENVIRONMENT</dt>
-      <dd><code>teal-green oxidized industrial metal</code>, <code>exposed scaffolding and catwalks</code>, <code>elevated walkways and hanging bridges</code>, <code>colored awnings and lived-in clutter</code>, <code>dust haze in three depth layers</code>, <code>humid mist</code>, <code>rusting scrap mountains</code>, <code>coral-like spiked rock ring</code>, <code>curved planetary horizon</code></dd>
-      <dt>LIGHT</dt>
-      <dd><code>soft diffuse overcast daylight</code>, <code>hard amber point lights</code>, <code>orange track lighting</code>, <code>industrial searchlights with visible light shafts</code>, <code>neon glow from inside</code>, <code>atmospheric bloom</code>, <code>no direct sun</code></dd>
-      <dt>PALETTE</dt>
-      <dd><code>dominant teal-green with charcoal shadows</code>, <code>amber orange accent lights</code>, <code>pink-purple moon</code>, <code>neon pink and green interior</code>, <code>blue atmospheric rim light at the horizon</code></dd>
-      <dt>CAMERA</dt>
-      <dd><code>extreme high-angle aerial view</code>, <code>low-angle looking up</code>, <code>wide 24mm lens</code>, <code>deep focus</code>, <code>cinematic composition</code>, <code>strong silhouette read</code></dd>
-      <dt>RENDER</dt>
-      <dd><code>clean digital painting with visible brushwork in haze and distance</code>, <code>crisp hard-surface detailing on silhouette edges</code>, <code>painterly atmospheric layers</code>, <code>no photorealism</code></dd>
-      <dt>MOOD</dt>
-      <dd><code>awe and quiet danger</code>, <code>lived-in used future</code>, <code>optimistic retro sci-fi</code>, <code>vast and lonely</code></dd>
+      <dt>STYLE ANCHOR · 风格锚点</dt>
+      <dd>70 年代复古未来概念美术，matte painting 世界观感，避免写实渲染。<br><code>retro-futuristic concept art</code>, <code>science-fiction environment concept art</code>, <code>Syd Mead and John Berkey influence</code>, <code>70s retro-futurism</code>, <code>matte painting feel</code>, <code>worldbuilding concept art</code></dd>
+      <dt>SCALE · 尺度</dt>
+      <dd>巨构压人；务必有小人、小飞船或白色尾迹作 L3 比例尺。<br><code>massive megastructure towering over the viewer</code>, <code>tiny human figures for scale</code>, <code>small transport ships trailing white contrails</code>, <code>extreme sense of scale</code>, <code>dwarfed by architecture</code></dd>
+      <dt>ENVIRONMENT · 环境</dt>
+      <dd>teal-green（青绿）氧化金属、脚手架吊桥、生活杂物、分层尘雾与湿度雾。<br><code>teal-green oxidized industrial metal</code>, <code>exposed scaffolding and catwalks</code>, <code>elevated walkways and hanging bridges</code>, <code>colored awnings and lived-in clutter</code>, <code>dust haze in three depth layers</code>, <code>humid mist</code>, <code>rusting scrap mountains</code>, <code>coral-like spiked rock ring</code>, <code>curved planetary horizon</code></dd>
+      <dt>LIGHT · 光</dt>
+      <dd>阴天软漫射为底，琥珀轨灯 / 探照 / 内景霓虹为硬点光；写清无直射太阳。<br><code>soft diffuse overcast daylight</code>, <code>hard amber point lights</code>, <code>orange track lighting</code>, <code>industrial searchlights with visible light shafts</code>, <code>neon glow from inside</code>, <code>atmospheric bloom</code>, <code>no direct sun</code></dd>
+      <dt>PALETTE · 色板</dt>
+      <dd>主色青绿 + 炭黑暗部；琥珀橙点光；Gloom 类可加粉紫月亮与霓虹内光。<br><code>dominant teal-green with charcoal shadows</code>, <code>amber orange accent lights</code>, <code>pink-purple moon</code>, <code>neon pink and green interior</code>, <code>blue atmospheric rim light at the horizon</code></dd>
+      <dt>CAMERA · 镜头</dt>
+      <dd>极端俯视或低仰视、24mm 广角、全景深，剪影可读优先。<br><code>extreme high-angle aerial view</code>, <code>low-angle looking up</code>, <code>wide 24mm lens</code>, <code>deep focus</code>, <code>cinematic composition</code>, <code>strong silhouette read</code></dd>
+      <dt>RENDER · 绘制</dt>
+      <dd>硬表面边缘清晰，雾与远景保留笔触；排除 photorealism。<br><code>clean digital painting with visible brushwork in haze and distance</code>, <code>crisp hard-surface detailing on silhouette edges</code>, <code>painterly atmospheric layers</code>, <code>no photorealism</code></dd>
+      <dt>MOOD · 情绪</dt>
+      <dd>lived-in used future：有人住、有痕迹的旧未来，敬畏与孤寂并存。<br><code>awe and quiet danger</code>, <code>lived-in used future</code>, <code>optimistic retro sci-fi</code>, <code>vast and lonely</code></dd>
     </dl>
   </div>
 
@@ -667,50 +669,53 @@
   <div class="panel">
     <span class="rivet-b"></span>
     <div class="prompt-head"><h3>模板 1 · 城市</h3><button class="copy" data-copy="t1">复制</button></div>
-    <p class="sub">Crater City / streets in Concord</p>
+    <p class="sub">Crater City / streets in Concord · 公式 A · 陨石坑阶梯城，极端高俯视，穿梭船尾迹与步道点景小人。</p>
     <pre id="t1">retro-futuristic science-fiction environment concept art, a dense terraced city built inside a vast crater, extreme high-angle aerial view looking down the terraces, teal-green oxidized industrial megastructure with exposed scaffolding, elevated walkways and hanging bridges, amber street lights and warm window glow speckling every level, small transport ships crossing the crater trailing white contrails, tiny human figures for scale on the walkways, blue atmospheric rim glow along the curved horizon, dust haze in three depth layers, soft diffuse overcast daylight with hard amber point lights, dominant teal-green and charcoal palette with amber accents, wide 24mm lens, deep focus, cinematic composition with strong silhouette read, clean digital painting with visible brushwork in the haze, Syd Mead and John Berkey influence, lived-in used future, extreme sense of scale --ar 16:9</pre>
-    <p>变体开关（三选一替换）：<code>low-angle from a street level</code> / <code>night version with dominant amber lights</code> / <code>fog-heavy version with only the top terraces visible</code></p>
+    <p>变体开关（三选一替换进主体或镜头段）：街景低机位 <code>low-angle from a street level</code> · 夜景琥珀主导 <code>night version with dominant amber lights</code> · 浓雾只露顶层 <code>fog-heavy version with only the top terraces visible</code></p>
   </div>
 
   <div class="panel">
     <span class="rivet-b"></span>
     <div class="prompt-head"><h3>模板 2 · 废墟巨构</h3><button class="copy" data-copy="t2">复制</button></div>
-    <p class="sub">Gloom / Akkar</p>
+    <p class="sub">Gloom / Akkar · 公式 B · 锈蚀机器人头颅聚落，粉紫月亮与内景霓虹，废料山与弧线尾迹飞船。</p>
     <pre id="t2">retro-futuristic concept art, a colossal rusted robot head repurposed as a settlement, low-angle view from the ground, rusting scrap mountains stacked around it, bright cyan-blue sky with a huge pink-purple moon, neon pink and green and blue interior glow spilling from openings in the head, patches of colored awnings and lived-in clutter, a giant mechanical finger half-buried in the scrap, a tiny ship arcing past with a white contrail, soft diffuse daylight with hard neon point lights, saturated 70s pop sci-fi palette, wide 28mm lens, deep focus, strong silhouette read, clean digital painting with visible brushwork in the dust, retro-futuristic worldbuilding, awe and quiet danger --ar 16:9</pre>
-    <p>变体开关：<code>abandoned and silent, no lights</code> / <code>golden dust hour with the moon low on the horizon</code> / <code>close-up on the interior market inside the head</code></p>
+    <p>变体开关：废弃无光 <code>abandoned and silent, no lights</code> · 金色尘雾 <code>golden dust hour with the moon low on the horizon</code> · 头颅内市集特写 <code>close-up on the interior market inside the head</code></p>
   </div>
 
   <div class="panel">
     <span class="rivet-b"></span>
     <div class="prompt-head"><h3>模板 3 · 太空港</h3><button class="copy" data-copy="t3">复制</button></div>
-    <p class="sub">The Guild</p>
+    <p class="sub">The Guild · 公式 A · 环形港穿小行星带，低机位 21:9，内缘橙色轨灯。</p>
     <pre id="t3">retro-futuristic science-fiction concept art, an enormous ring-shaped spaceport and transit ring threading through a dense asteroid belt, teal-green and dark grey hull plating with panel lines, rivets and exposed conduits, orange track lighting running along the inner face of the ring, small transport ships and tiny human figures for scale against the ring, drifting asteroids in the foreground, industrial hard-surface design, thick atmospheric dust haze separating three depth layers, soft ambient space light with hard orange point lights, dominant teal-green with charcoal and amber accents, low-angle wide 24mm composition with the ring dominating the upper two thirds, deep focus, clean digital painting with painterly haze, extreme sense of scale, "GUILD Department of Transportation" style insignia on the hull, Syd Mead influence --ar 21:9</pre>
-    <p>变体开关：<code>inside the ring, looking along the track</code> / <code>docking bay interior with a ship arriving</code> / <code>ring seen from far away as a thin bright arc</code></p>
+    <p>变体开关：环内沿轨道 <code>inside the ring, looking along the track</code> · 坞站入港 <code>docking bay interior with a ship arriving</code> · 极远细弧 <code>ring seen from far away as a thin bright arc</code></p>
   </div>
 
   <div class="panel">
     <span class="rivet-b"></span>
     <div class="prompt-head"><h3>模板 4 · 有机海岸</h3><button class="copy" data-copy="t4">复制</button></div>
-    <p class="sub">Pirate Cove / Geysers of Coral Nova</p>
+    <p class="sub">Pirate Cove / Geysers of Coral Nova · 公式 C · 珊瑚白岩环、青绿海水、环内橙色内光，贴水面低机位。</p>
     <pre id="t4">retro-futuristic concept art, a ring of spiked coral-like pale pink-white rock formations rising from teal-green water, a small settlement built inside the ring glowing with warm orange interior light, high-humidity mist drifting between the spires, geysers of water and steam shooting up, wet glossy highlights on the rock surfaces, soft diffuse overcast light with hard orange point lights inside the settlement, coral white and teal-green palette with orange accents, wide 28mm lens, low-angle across the water surface, deep focus, clean digital painting with painterly brushwork in the mist, bio-organic architecture fused with hard-surface shacks, calm but dangerous, extreme sense of scale --ar 16:9</pre>
-    <p>变体开关：<code>aerial view straight down into the ring</code> / <code>storm version with grey-green water and heavy spray</code> / <code>dusk version with the orange settlement as the only light source</code></p>
+    <p>变体开关：正俯视环心 <code>aerial view straight down into the ring</code> · 风暴水花 <code>storm version with grey-green water and heavy spray</code> · 黄昏仅定居点发光 <code>dusk version with the orange settlement as the only light source</code></p>
   </div>
 
   <div class="panel">
     <span class="rivet-b"></span>
     <div class="prompt-head"><h3>模板 5a · 世界草图单格</h3><button class="copy" data-copy="t5a">复制</button></div>
+    <p class="sub">公式 E · 四色限色、厚笔触块面、剪影优先，无细节与纹理，1:1 缩略探索图。</p>
     <pre id="t5a">loose world exploration sketch, thick painterly block-in, flat limited color palette of only four colors, strong silhouette first, no fine detail, no texture rendering, a retro-futuristic structure reading as a simple shape against a flat sky, visible brush strokes following the form, three-color dominance with one accent, graphic and poster-like, retro sci-fi worldbuilding thumbnail --ar 1:1</pre>
   </div>
   <div class="panel">
     <span class="rivet-b"></span>
     <div class="prompt-head"><h3>模板 5b · 六宫格</h3><button class="copy" data-copy="t5b">复制</button></div>
+    <p class="sub">公式 E · 每格独立 3–4 色，厚笔触海报式块面，无渐变。</p>
     <pre id="t5b">six-panel grid of loose world exploration sketches, each panel using its own independent limited palette of three to four colors, different palette per panel (orange-purple, blue-yellow, red-green, teal-orange-white, pink-grey, green-amber), thick painterly block-in only, strong silhouettes, no fine detail, no gradients, flat poster-like shapes, retro-futuristic structures and landforms, Syd Mead and John Berkey influence on shape language --ar 3:2</pre>
-    <p>变体开关：<code>swap panel palettes</code> / <code>increase brush thickness</code> / <code>reduce to three colors per panel</code></p>
+    <p>变体开关：对调色板 <code>swap panel palettes</code> · 加粗笔触 <code>increase brush thickness</code> · 每格三色 <code>reduce to three colors per panel</code></p>
   </div>
 </section>
 
 <section id="neg">
   <h2><span class="num">06</span>负向规避</h2>
+  <p class="sub">下列英文负向词可直接粘贴到 negative prompt；重点避开写实引擎感、灰棕发闷、无比例尺与全图虚化。</p>
   <div class="panel">
     <span class="rivet-b"></span>
     <div class="prompt-head"><h3>负向词</h3><button class="copy" data-copy="negp">复制</button></div>

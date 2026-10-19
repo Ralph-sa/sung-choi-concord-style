@@ -6,7 +6,7 @@
 
 ## 0. 一句话风格定位
 
-**“明亮青蓝天空下的青绿工业巨构 + 琥珀点光 + 高饱和复古未来波普色，用极端机位和点景小人的尺度对比讲‘used future’的世界观。”**
+**「明亮青蓝天空下的青绿工业巨构 + 琥珀点光 + 高饱和复古未来波普色，用极端机位和点景小人的尺度对比，讲有人居住、有使用痕迹的 old future（used future）世界观。」**
 
 更具体地说：**硬表面工业语言（面板、脚手架、轨道环、铆接金属）× 大面积青绿锈蚀 × 少量高饱和橙/粉紫/霓虹作为视觉焦点**，成品图偏干净渲染 + 局部笔触概括，草图则压缩为厚笔触限色色块，复古未来（retro-futurism，Syd Mead / John Berkey 取向）而非写实硬科幻。
 
@@ -33,7 +33,7 @@
 3. **贴水平线**：液面/地表齐平，主体从画面下方冲出（Leviathan）。水面线压在画面下 1/3。
 4. **座舱/框景视角**：用结构框（窗框、门洞、机械手指间隙）把远景框起来（Cockpit、Gloom 指缝）。
 
-焦距约定：**24–35mm 广角**做巨构与空间纵深；**50mm** 做中景人居；避免 85mm 以上的压缩感（会丢掉“巨”。
+焦距约定：**24–35mm 广角**做巨构与空间纵深；**50mm** 做中景人居；避免 85mm 以上的压缩感（会丢掉「巨构感」）。
 
 ### 1.3 引导线（每张至少一条贯穿主线）
 
@@ -209,34 +209,60 @@
 
 ### 5.1 拼装顺序（固定，别乱序）
 
+按下列槽位从左到右拼接；每一格只填一类信息，避免在同一段里重复写光或色。
+
+| 槽位 | 中文含义 | 写什么 |
+|---|---|---|
+| STYLE ANCHOR | 风格锚点 | 复古未来、概念美术取向、参考艺术家语汇 |
+| SUBJECT | 主体 | 场景一句话：什么巨构 / 聚落 / 地貌 |
+| SCALE LAYERS | 尺度层级 | L1/L2/L3：巨构、人居、点景小人或飞船 |
+| ENVIRONMENT | 环境材质 | 青绿锈蚀金属、脚手架、有机岩、雾层等 |
+| LIGHT | 光照 | 软漫射环境光 + 琥珀/霓虹硬点光 |
+| PALETTE | 色板 | 主辅色比例与 accent 色名 |
+| CAMERA | 镜头 | 机位、焦距、景深、构图读法 |
+| RENDER | 绘制方式 | 干净数字绘画 + 远景笔触，非写实 |
+| MOOD | 情绪 | used future（有人住的旧未来）、敬畏与孤寂等 |
+
+可复制骨架（英文槽位名便于与下文模块对照）：
+
 ```
 [STYLE ANCHOR] + [SUBJECT] + [SCALE LAYERS] + [ENVIRONMENT] + [LIGHT] + [PALETTE] + [CAMERA] + [RENDER] + [MOOD]
 ```
 
 ### 5.2 可复用关键词模块
 
-**STYLE ANCHOR**
+以下每类先读中文说明，再从代码块复制英文片段拼进 prompt（生成器对英文关键词响应更稳定）。
+
+**STYLE ANCHOR（风格锚点）** — 锁定 70 年代复古未来概念美术，带 matte painting 世界观感，避免滑向写实渲染。
+
 `retro-futuristic concept art`, `science-fiction environment concept art`, `Syd Mead and John Berkey influence`, `70s retro-futurism`, `matte painting feel`, `worldbuilding concept art`
 
-**SCALE**
+**SCALE（尺度）** — 强调巨构压人、点景比例尺；务必出现小人、小飞船或白色尾迹之一。
+
 `massive megastructure towering over the viewer`, `tiny human figures for scale`, `small transport ships trailing white contrails`, `extreme sense of scale`, `dwarfed by architecture`
 
-**ENVIRONMENT**
+**ENVIRONMENT（环境）** — teal-green（青绿）氧化工业金属、脚手架与吊桥、生活杂物、分层尘雾与湿度雾。
+
 `teal-green oxidized industrial metal`, `exposed scaffolding and catwalks`, `elevated walkways and hanging bridges`, `colored awnings and lived-in clutter`, `dust haze in three depth layers`, `humid mist`, `rusting scrap mountains`, `coral-like spiked rock ring`, `curved planetary horizon`
 
-**LIGHT**
+**LIGHT（光）** — 阴天软光为底，琥珀轨灯 / 探照 / 内景霓虹为硬点光；明确写「无直射太阳」。
+
 `soft diffuse overcast daylight`, `hard amber point lights`, `orange track lighting`, `industrial searchlights with visible light shafts`, `neon glow from inside`, `atmospheric bloom`, `no direct sun`
 
-**PALETTE**
+**PALETTE（色板）** — 主色青绿 + 炭黑暗部；琥珀橙为点光 accent；Gloom 类可加粉紫月亮与霓虹内光。
+
 `dominant teal-green with charcoal shadows`, `amber orange accent lights`, `pink-purple moon`, `neon pink and green interior`, `blue atmospheric rim light at the horizon`
 
-**CAMERA**
+**CAMERA（镜头）** — 极端俯视或低仰视、24mm 广角、全景深，剪影可读优先于虚化。
+
 `extreme high-angle aerial view`, `low-angle looking up`, `wide 24mm lens`, `deep focus`, `cinematic composition`, `strong silhouette read`
 
-**RENDER**
+**RENDER（绘制）** — 硬表面边缘清晰，雾与远景保留笔触；显式排除 photorealism（照片级写实）。
+
 `clean digital painting with visible brushwork in haze and distance`, `crisp hard-surface detailing on silhouette edges`, `painterly atmospheric layers`, `no photorealism`
 
-**MOOD**
+**MOOD（情绪）** — lived-in used future：有人住、有维护痕迹的旧未来，而非无菌新建筑。
+
 `awe and quiet danger`, `lived-in used future`, `optimistic retro sci-fi`, `vast and lonely`
 
 ### 5.3 五套完整模板
@@ -245,59 +271,89 @@
 
 #### 模板 1｜城市（Crater City / streets in Concord）
 
+**说明**：陨石坑内阶梯式工业城，极端高俯视看梯田街区；公式 A 色板，穿梭船尾迹 + 步道上的点景小人，三层尘雾与地平线青蓝 rim 光。
+
 ```
 retro-futuristic science-fiction environment concept art, a dense terraced city built inside a vast crater, extreme high-angle aerial view looking down the terraces, teal-green oxidized industrial megastructure with exposed scaffolding, elevated walkways and hanging bridges, amber street lights and warm window glow speckling every level, small transport ships crossing the crater trailing white contrails, tiny human figures for scale on the walkways, blue atmospheric rim glow along the curved horizon, dust haze in three depth layers, soft diffuse overcast daylight with hard amber point lights, dominant teal-green and charcoal palette with amber accents, wide 24mm lens, deep focus, cinematic composition with strong silhouette read, clean digital painting with visible brushwork in the haze, Syd Mead and John Berkey influence, lived-in used future, extreme sense of scale --ar 16:9
 ```
 
-**变体开关（三选一替换）**：`low-angle from a street level` / `night version with dominant amber lights` / `fog-heavy version with only the top terraces visible`
+**变体开关（三选一替换进 SUBJECT 或 CAMERA 段）**：
+
+- 街景低机位：`low-angle from a street level`
+- 夜景琥珀主导：`night version with dominant amber lights`
+- 浓雾只露顶层：`fog-heavy version with only the top terraces visible`
 
 ---
 
 #### 模板 2｜废墟巨构（Gloom / Akkar）
 
+**说明**：公式 B；巨型锈蚀机器人头颅改聚落，低机位仰视，粉紫月亮 + 内景霓虹，废料山与半埋机械手指，小飞船弧线尾迹作 L3。
+
 ```
 retro-futuristic concept art, a colossal rusted robot head repurposed as a settlement, low-angle view from the ground, rusting scrap mountains stacked around it, bright cyan-blue sky with a huge pink-purple moon, neon pink and green and blue interior glow spilling from openings in the head, patches of colored awnings and lived-in clutter, a giant mechanical finger half-buried in the scrap, a tiny ship arcing past with a white contrail, soft diffuse daylight with hard neon point lights, saturated 70s pop sci-fi palette, wide 28mm lens, deep focus, strong silhouette read, clean digital painting with visible brushwork in the dust, retro-futuristic worldbuilding, awe and quiet danger --ar 16:9
 ```
 
-**变体开关**：`abandoned and silent, no lights` / `golden dust hour with the moon low on the horizon` / `close-up on the interior market inside the head`
+**变体开关**：
+
+- 废弃无光：`abandoned and silent, no lights`
+- 金色尘雾、月亮贴地平线：`golden dust hour with the moon low on the horizon`
+- 头颅内市集特写：`close-up on the interior market inside the head`
 
 ---
 
 #### 模板 3｜太空港（The Guild）
 
+**说明**：公式 A；环形太空港穿小行星带，低机位环占画面上 2/3，内缘橙色轨灯，前景漂石，建议 21:9 宽幅。
+
 ```
 retro-futuristic science-fiction concept art, an enormous ring-shaped spaceport and transit ring threading through a dense asteroid belt, teal-green and dark grey hull plating with panel lines, rivets and exposed conduits, orange track lighting running along the inner face of the ring, small transport ships and tiny human figures for scale against the ring, drifting asteroids in the foreground, industrial hard-surface design, thick atmospheric dust haze separating three depth layers, soft ambient space light with hard orange point lights, dominant teal-green with charcoal and amber accents, low-angle wide 24mm composition with the ring dominating the upper two thirds, deep focus, clean digital painting with painterly haze, extreme sense of scale, "GUILD Department of Transportation" style insignia on the hull, Syd Mead influence --ar 21:9
 ```
 
-**变体开关**：`inside the ring, looking along the track` / `docking bay interior with a ship arriving` / `ring seen from far away as a thin bright arc`
+**变体开关**：
+
+- 环内沿轨道看出去：`inside the ring, looking along the track`
+- 坞站内船入港：`docking bay interior with a ship arriving`
+- 极远距细弧：`ring seen from far away as a thin bright arc`
 
 ---
 
 #### 模板 4｜有机海岸（Pirate Cove / Geysers of Coral Nova）
 
+**说明**：公式 C；珊瑚白刺状岩环 + 青绿海水，环内橙色内光定居点，间歇泉与湿雾，贴水面低机位。
+
 ```
 retro-futuristic concept art, a ring of spiked coral-like pale pink-white rock formations rising from teal-green water, a small settlement built inside the ring glowing with warm orange interior light, high-humidity mist drifting between the spires, geysers of water and steam shooting up, wet glossy highlights on the rock surfaces, soft diffuse overcast light with hard orange point lights inside the settlement, coral white and teal-green palette with orange accents, wide 28mm lens, low-angle across the water surface, deep focus, clean digital painting with painterly brushwork in the mist, bio-organic architecture fused with hard-surface shacks, calm but dangerous, extreme sense of scale --ar 16:9
 ```
 
-**变体开关**：`aerial view straight down into the ring` / `storm version with grey-green water and heavy spray` / `dusk version with the orange settlement as the only light source`
+**变体开关**：
+
+- 正俯视环心：`aerial view straight down into the ring`
+- 风暴灰绿水花：`storm version with grey-green water and heavy spray`
+- 黄昏仅定居点发光：`dusk version with the orange settlement as the only light source`
 
 ---
 
 #### 模板 5｜世界草图色块（World Sketches 六宫格）
 
-**单格：**
+**说明**：公式 E；厚笔触限色，剪影优先，不要细节与渐变。单格做缩略图，六宫格每格独立色板。
+
+**单格（1:1 缩略探索图）：**
 
 ```
 loose world exploration sketch, thick painterly block-in, flat limited color palette of only four colors, strong silhouette first, no fine detail, no texture rendering, a retro-futuristic structure reading as a simple shape against a flat sky, visible brush strokes following the form, three-color dominance with one accent, graphic and poster-like, retro sci-fi worldbuilding thumbnail --ar 1:1
 ```
 
-**六宫格：**
+**六宫格（每格 3–4 色，互不复用）：**
 
 ```
 six-panel grid of loose world exploration sketches, each panel using its own independent limited palette of three to four colors, different palette per panel (orange-purple, blue-yellow, red-green, teal-orange-white, pink-grey, green-amber), thick painterly block-in only, strong silhouettes, no fine detail, no gradients, flat poster-like shapes, retro-futuristic structures and landforms, Syd Mead and John Berkey influence on shape language --ar 3:2
 ```
 
-**变体开关**：`swap panel palettes` / `increase brush thickness` / `reduce to three colors per panel`
+**变体开关**：
+
+- 对调各格色板：`swap panel palettes`
+- 加粗笔触：`increase brush thickness`
+- 每格压到三色：`reduce to three colors per panel`
 
 ### 5.4 参数建议
 
@@ -308,6 +364,8 @@ six-panel grid of loose world exploration sketches, each panel using its own ind
 ---
 
 ## 6. 负向规避（不要出现什么）
+
+下列英文负向词可直接粘贴到生成器的 negative prompt；按工具需要可拆行或合并为一行逗号分隔。重点避开：写实引擎感、灰棕发闷、无比例尺、全图虚化。
 
 ```
 photorealistic, hyperrealistic, 8k octane render, unreal engine screenshot look, ray-traced reflections,
