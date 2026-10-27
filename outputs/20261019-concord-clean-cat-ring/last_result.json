@@ -1,0 +1,36 @@
+{
+  "taskId": "642387607849801294",
+  "status": "completed",
+  "mode": "gpt",
+  "size": "16:9",
+  "resultCount": 4,
+  "out_dir": "C:\\AI\\AIART\\20261019-230852-Concord干净居住废墟猫",
+  "outs_dir": "C:\\Users\\happyelements\\AIART-outs\\20261019-concord-clean-cat-ring",
+  "files": [
+    {
+      "path": "C:\\Users\\happyelements\\AIART-outs\\20261019-concord-clean-cat-ring\\aiart-1.png",
+      "bytes": 4181860
+    },
+    {
+      "path": "C:\\Users\\happyelements\\AIART-outs\\20261019-concord-clean-cat-ring\\aiart-2.png",
+      "bytes": 4395580
+    },
+    {
+      "path": "C:\\Users\\happyelements\\AIART-outs\\20261019-concord-clean-cat-ring\\aiart-3.png",
+      "bytes": 4321356
+    },
+    {
+      "path": "C:\\Users\\happyelements\\AIART-outs\\20261019-concord-clean-cat-ring\\aiart-4.png",
+      "bytes": 4335524
+    }
+  ],
+  "contactSheet": "C:\\Users\\happyelements\\AIART-outs\\20261019-concord-clean-cat-ring\\contact-sheet.jpg",
+  "refs": [
+    "Guild_metal_amber.jpg",
+    "SpaceRing_halo_arc.jpg",
+    "Akkar_bright_sky.jpg",
+    "Gloom_moon_scale.jpg"
+  ],
+  "success": true,
+  "failures": []
+}

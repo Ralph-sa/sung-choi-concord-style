@@ -1,0 +1,21 @@
+retro-futuristic science-fiction ENVIRONMENT concept art, Syd Mead and John Berkey influence, 70s retro-futurism, matte painting feel, worldbuilding key art, Concord game concept art style language like Sung Choi Gloom and Akkar
+
+SUBJECT AS INHABITED MEGASTRUCTURE (not a character poster): a colossal giant anthropomorphic cat-shaped ancient-tech wreck standing upright in the midground, treated like the Gloom robot skull settlement — the armored body is a HOLLOWED USED-FUTURE HABITAT, cracked teal oxidized plate armor with large empty planar panels, scaffolding catwalks tarp awnings and shacks CLIMBING ON and INSIDE the armor cracks, small amber window lights and neon pink-cyan interior glow leak from gaps in the chest and helmet like Gloom neon interior, the cat head is graphic hard-edge simplified planar forms large color blocks NO fur NO whiskers NO photoreal face, ears are hard-surface armor fin panels, optional industrial two-handed blade as a dull oxidized girder-like greatsword planted as a structural pillar with settlement platforms attached to the blade, NOT a fantasy magic sword
+
+SCALE LAYERS MUST ALL BE READABLE: L1 the inhabited cat wreck plus Halo industrial ring plus huge pink-purple moon (55-70 percent), L2 dense midground settlement 12-18 percent of frame — multi-level scaffolding shacks colored fabric awnings yellow red teal hanging laundry neon signs clinging to ruins AND to the cat armor itself like Akkar cliff colony density, L3 tiny people on scaffolds and tiny transport ships with white contrails 1-3 percent for extreme scale
+
+ENVIRONMENT: bright cyan-blue daytime sky 40-50 percent continuous negative space like Gloom, huge pale pink-purple full moon, vast industrial Halo-style ring arc of ancient tech behind the moon with teal oxidized plating panel lines rivets amber track lights only as tiny hard points, rocky scrap plain with dust haze in three depth layers, lived-in used future not empty hero statue plaza
+
+COLOR POP ACCENTS (critical): do NOT make everything the same teal — add high-saturation pop accents like Concord: mustard yellow and white panel patches, pink-magenta neon interior glow inside armor gaps, one pink or coral painted plating patch, white hull accents on small ships, amber point lights only as tiny windows and track lights under 10 percent
+
+LIGHT: soft diffuse overcast daylight main light, hard amber point lights only tiny, neon bloom only inside armor hollows, NO cinematic blue night, NO moonlit photo night, NO single harsh sun
+
+PALETTE: bright cyan-blue sky, dominant teal-green oxidized metal, charcoal teal-black shadows, amber point lights, pink-purple moon, mustard yellow and white panel accents, neon pink-cyan interior accents, saturated 70s pop sci-fi, NOT desaturated navy, NOT monochrome teal-only
+
+CAMERA: low-angle wide 24mm looking slightly up, inhabited cat wreck slightly off-center or center-low dominating midground, moon and industrial ring upper two thirds, large continuous sky, deep focus, strong silhouette, cinematic 16:9 environment composition NOT character key art
+
+RENDER: clean digital painting with LARGE COLOR PLANES, visible brushwork in haze clouds distance scrap, crisp hard-surface edges, matte painting, graphic simplified forms, details only at seams and edges leave big panels empty, NO photorealism, NO octane, NO unreal engine screenshot, NO cinematic photo look, NO hyperdetailed metal noise everywhere
+
+MOOD: awe quiet danger, lived-in used future, people live inside the wreck, optimistic retro sci-fi, extreme scale
+
+NEGATIVE AVOID: solid sealed knight statue, heroic character poster, photorealistic cat face, realistic fur, tabby stripes, whiskers, cinematic blue night, deep navy night sky, glowing runes, fantasy magic sword glow, glowing blade core, monochrome teal-only, empty sparse towers, generic epic fantasy poster, octane render, unreal engine, ray tracing, hyperrealistic, 8k photo, shallow depth of field, bokeh, anime, cartoon outlines, watermark, logo, text overlay
