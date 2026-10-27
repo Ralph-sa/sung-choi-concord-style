@@ -1,0 +1,19 @@
+﻿retro-futuristic science-fiction environment concept art, Syd Mead and John Berkey influence, 70s retro-futurism, matte painting feel, worldbuilding key art, Concord game concept art style language
+
+SUBJECT: a colossal giant anthropomorphic cat standing upright in the foreground-center of a vast alien plain, low-angle looking slightly up, the cat wears heavy medieval plate armor made of large oxidized teal-green hard-surface panels with rivets, panel lines, charcoal steel undersuit, worn used-future weathering, NO glowing runes, NO magic symbols, the armored cat holds a massive two-handed greatsword with both paws resting tip on the ground, the sword is dull industrial metal with only tiny amber edge highlight on the fuller not a glowing magic blade, cat head stylized with simplified hard planar forms and large color blocks, graphic silhouette read, NOT photorealistic fur, NOT realistic cat face photo, NOT whisker detail
+
+SCALE LAYERS: L1 the giant armored cat and a Halo-like planetary ring megastructure and a huge full moon, L2 midground ancient advanced civilization ruins as teal-green oxidized industrial towers with scaffolding, catwalks, settlement shacks and colored awnings clinging to the ruins, L3 tiny distant travelers and small transport ships trailing white contrails for extreme scale
+
+ENVIRONMENT: bright cyan-blue daytime sky dominating the upper half like Concord Gloom palette, huge pale pink-purple full moon behind the cat, a vast industrial Halo-style ring arc of ancient tech megastructure encircling behind the moon, teal-green oxidized ring plating with panel lines rivets exposed conduits scaffolding and amber track lights only as small hard point lights, rocky plain with dust haze in three depth layers, lived-in used future not empty wasteland
+
+LIGHT: soft diffuse overcast daylight as main environment light, hard amber point lights only as tiny accents on armor seams, distant windows, and ring track lights, atmospheric bloom limited to point lights, NO cinematic blue night grade, NO single harsh sun, NO moonlit photoreal night
+
+PALETTE: bright cyan-blue sky 40-50 percent, dominant teal-green oxidized metal 30-40 percent, charcoal teal-black shadows 15-20 percent, amber-orange accents under 10 percent only as point lights, small rust-yellow and pink-purple moon accents, saturated 70s pop sci-fi color, NOT desaturated navy night, NOT grey-brown mud
+
+CAMERA: low-angle wide 24mm looking slightly up, armored cat centered slightly below middle dominating foreground, moon and industrial ring dominating upper two thirds, large continuous sky negative space, deep focus, strong silhouette read, cinematic 16:9 composition
+
+RENDER: clean digital painting with large color planes, visible brushwork in haze clouds and distance, crisp hard-surface edges on armor and ring silhouette, matte painting concept art, painterly atmospheric layers, graphic simplified forms, NO photorealism, NO octane render, NO unreal engine screenshot, NO cinematic photo look
+
+MOOD: awe and quiet danger, lived-in used future, optimistic retro sci-fi, extreme sense of scale
+
+NEGATIVE AVOID: photorealistic cat face, realistic fur detail, cinematic blue night grade, deep navy night sky, glowing runes, fantasy magic sword glow, glowing blade core, generic epic fantasy poster, octane render, unreal engine, ray tracing, hyperrealistic, 8k photo, shallow depth of field, bokeh, anime, cartoon outlines, watermark, logo, text overlay

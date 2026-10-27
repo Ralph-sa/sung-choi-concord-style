@@ -1,0 +1,26 @@
+{
+  "taskId": "642385963279975567",
+  "status": "completed",
+  "mode": "gpt",
+  "size": "16:9",
+  "width": 2048,
+  "height": 1152,
+  "folderNote": "Concord居住废墟猫天环",
+  "localDir": "C:\\AI\\AIART\\20261019-225231-Concord居住废墟猫天环",
+  "userCopyDir": "C:\\Users\\happyelements\\AIART-outs\\20261019-concord-inhabited-cat-ring",
+  "boxDir": "/workspace/sung-choi-concord/outputs/20261019-concord-inhabited-cat-ring/",
+  "resultCount": 4,
+  "images": [
+    "C:\\AI\\AIART\\20261019-225231-Concord居住废墟猫天环\\aiart-642385963279975567-1.png",
+    "C:\\AI\\AIART\\20261019-225231-Concord居住废墟猫天环\\aiart-642385963279975567-2.png",
+    "C:\\AI\\AIART\\20261019-225231-Concord居住废墟猫天环\\aiart-642385963279975567-3.png",
+    "C:\\AI\\AIART\\20261019-225231-Concord居住废墟猫天环\\aiart-642385963279975567-4.png"
+  ],
+  "contactSheet": "C:\\AI\\AIART\\20261019-225231-Concord居住废墟猫天环\\aiart-642385963279975567-contact-sheet.jpg",
+  "references": [
+    "Gloom_moon_scale.jpg",
+    "Guild_metal_amber.jpg",
+    "SpaceRing_halo_arc.jpg",
+    "Akkar_bright_sky.jpg"
+  ]
+}
